@@ -1,0 +1,73 @@
+:root{
+    --background-color: rgba(10, 7, 95, 1);
+    --button-color: #F5167E;
+}
+
+.footer-class {
+    bottom: 0;
+    padding: 56px 100px;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.info-class p{
+    color: white;
+    font-weight: 500;
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
+}
+
+.info-class .info-image-class{
+    margin-right: 16px;
+}
+
+.plan-event-class .title-class{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.plan-event-class .content-class{
+    color: white;
+}
+
+.stay-in-the-loop-class .title-class {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.stay-in-the-loop-class .content-class {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.enter-email-class{
+    background-color: white;
+    border-radius: 100px;
+    padding: 7px;
+}
+
+#enter-email-id{
+    width: 160px;
+    border: none;
+    margin-right: 19px;
+    margin-left: 21px;
+}
+
+#enter-email-id:focus{
+    outline: none;
+}
+
+#submit-email-id{
+    background-color: var(--button-color);
+    font-size: 12.16px;
+    border-radius: 100px;
+    color: white;
+    padding: 15.2px 30.4px;
+    border: none;
+}

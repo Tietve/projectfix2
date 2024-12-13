@@ -1,0 +1,73 @@
+
+:root {
+    --background-color: rgba(10, 7, 95, 1);
+    --hover-color: rgba(252, 252, 252, .25);
+}
+
+header {
+    top: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 175px;
+    padding-right: 78px;
+    position: sticky;
+}
+
+
+.icon-logo-class {
+    margin-right: auto;
+    background-color: transparent;
+    padding: 0px;
+    border-color: transparent;
+}
+
+.navbar-class li {
+    display: inline-block;
+}
+
+.navbar-class li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white !important;
+    transition: all .3s ease 0s;
+    padding-left: 13.5px;
+    padding-right: 13.5px;
+    cursor: pointer;
+}
+
+.active{
+    padding: 10px 30.5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    padding-left: 13.5px;
+    padding-right: 13.5px;
+    border-bottom: solid;
+    cursor: pointer;
+}
+
+#btn-login-id {
+    padding: 10px 30.5px;  /* Padding tạo khoảng cách bên trong */
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 100px;
+    border: solid 1px white;
+    color: white;
+    background-color: transparent;
+    margin-left: 30px;
+    line-height: 1;  /* Căn chỉnh văn bản trong nút */
+    box-sizing: border-box;  /* Đảm bảo padding và border được tính trong kích thước tổng thể */
+}
+
+#btn-login-id:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+

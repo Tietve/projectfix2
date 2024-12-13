@@ -1,0 +1,19 @@
+.custom-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    -webkit-appearance: none; /* For Chrome */
+    -moz-appearance: none; /* For Firefox */
+    appearance: none; /* For all other browsers */
+}
+
+.custom-select option {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    alignItems: 'center';
+}
+
+
