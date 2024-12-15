@@ -71,10 +71,7 @@ const ProductHome = () => {
 				{products.map((product) => (
 					<Col key={product.uuid} md={4} className='mb-4'>
 						<Card>
-							<Card.Img
-								variant='top'
-								src={product?.image ?? 'https://via.placeholder.com/343x197'}
-							/>
+							<Card.Img variant='top' src={product.thumbnailUrl} />
 							<Card.Body>
 								<Card.Title>{product.name}</Card.Title>
 								<div className='d-flex justify-content-between align-items-center'>
@@ -86,7 +83,7 @@ const ProductHome = () => {
 									</div>
 									<Button
 										variant='primary'
-										href={API_BASE_URL + '/api/events/info/' + product.uuid}>
+										href={API_BASE_URL + '/events/info/' + product.uuid}>
 										View Details
 									</Button>
 								</div>
