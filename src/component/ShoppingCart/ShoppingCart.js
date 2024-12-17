@@ -140,10 +140,13 @@ export default function ShoppingCart() {
                                             );
                                         }}
                                     >
-                                        <a href="/Checkout">
                                         <AddShoppingCartIcon className="mr-2 h-4 w-4" />
+                                        <Link to="/Checkout"  style={{
+                                            color: 'white',
+                                            textDecoration: 'none'
+                                        }}>
                                         Check Out
-                                        </a>
+                                        </Link>
                                     </Button>
                                 </div>
                             </div>
