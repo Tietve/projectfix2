@@ -182,8 +182,13 @@ export default function EventDetail() {
 								}),
 							);
 						}}>
-						<AddShoppingCartIcon className='mr-2 h-4 w-4' />
-						Buy now
+						 <AddShoppingCartIcon/>
+                        <Link to="/Cart"  style={{
+                            color: 'white',
+                            textDecoration: 'none'
+                        }}>
+                        Buy now
+                        </Link>
 					</Button>
 
 					{/* Event Description */}
