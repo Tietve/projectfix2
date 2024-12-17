@@ -11,7 +11,7 @@ const MediaAPI = {
 	getEventMedia: async (eventUuid) => {
 		try {
 			const response = await axios.get(`${API_BASE_URL}/event/${eventUuid}`);
-			return response.data; // Return the array of media objects
+			return response; // Return the array of media objects
 		} catch (error) {
 			console.error(
 				'Error fetching media for event:',

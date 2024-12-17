@@ -1,25 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
-// src/index.js
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
-
-import { Button, Badge, Card } from 'react-bootstrap'; // Adjust imports based on your project structure
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useDispatch } from 'react-redux';
-import { addToCart } from './CartReducer'; // Adjust for your Redux store
-import { useParams } from 'react-router-dom';
+import { Button, Card, Badge } from 'react-bootstrap';
 import EventAPI from '../api/Event';
 import MediaAPI from '../api/Media';
 import TicketAPI from '../api/Ticket';
+import { addToCart } from './CartReducer';
 import './EventDetail.css';
 
 export default function EventDetail() {
@@ -29,17 +18,6 @@ export default function EventDetail() {
 	const [media, setMedia] = useState([]);
 	const [tickets, setTickets] = useState([]);
 	const [quantity, setQuantity] = useState({});
-
-	const carouselSettings = {
-		dots: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: true, // Explicitly enable arrows
-		autoplay: false,
-		adaptiveHeight: true,
-	};
 
 	const formatDate = (dateString) => {
 		return new Date(dateString).toLocaleString('en-US', {
@@ -60,10 +38,7 @@ export default function EventDetail() {
 
 		// Fetch event media
 		MediaAPI.getEventMedia(eventUuid)
-			.then((response) => {
-				setMedia(response.data);
-				console.log(response.data);
-			})
+			.then((data) => setMedia(data))
 			.catch((error) => console.error('Error fetching event media:', error));
 
 		// Fetch tickets for the event
@@ -89,30 +64,9 @@ export default function EventDetail() {
 				{/* Media Section */}
 				<div className='image-container'>
 					{media.length > 0 ? (
-						<Swiper
-							modules={[Navigation, Pagination]}
-							spaceBetween={10}
-							slidesPerView={1}
-							navigation
-							pagination={{ clickable: true }}
-							className='w-full h-auto'>
-							{media.map((item) => (
-								<SwiperSlide key={item.id} className='w-full'>
-									<img
-										src={item.url}
-										alt={`Media ${item.id}`}
-										className='w-full h-auto object-cover rounded-lg'
-										style={{ maxHeight: '400px', objectFit: 'cover' }}
-									/>
-								</SwiperSlide>
-							))}
-						</Swiper>
+						<img src={media[0].url} alt={event.name} />
 					) : (
-						<img
-							src='https://via.placeholder.com/343x197'
-							alt='Placeholder'
-							className='w-full h-auto object-cover rounded-lg'
-						/>
+						<img src='https://via.placeholder.com/343x197' alt='Placeholder' />
 					)}
 				</div>
 

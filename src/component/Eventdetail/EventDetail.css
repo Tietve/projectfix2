@@ -1,11 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .image-container {
     width: 100%;
     height: auto;
-    max-height: 600px; /* Đặt chiều cao tối đa */
-    overflow: hidden; /* Cắt nếu quá lớn */
+    max-height: 600px;
+    /* Đặt chiều cao tối đa */
+    overflow: hidden;
+    /* Cắt nếu quá lớn */
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -14,14 +17,28 @@
 .image-container img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Đảm bảo tỷ lệ */
+    object-fit: cover;
+    /* Đảm bảo tỷ lệ */
 
 
 }
+
 /* EventDetail.css */
 .card-custom {
-    border-width: 1px; /* Giảm độ dày của border */
+    border-width: 1px;
+    /* Giảm độ dày của border */
 }
+
+.slick-prev,
+.slick-next {
+    display: block !important;
+}
+
+.slick-slider {
+    position: relative;
+    z-index: 1;
+}
+
 
 
 /*.image-container {*/
@@ -39,7 +56,3 @@
 /*    object-fit: contain;   !* Giữ nguyên tỷ lệ ảnh *!*/
 /*    border-radius: 10px;   !* Thêm bo tròn góc (tuỳ chọn) *!*/
 /*}*/
-
-
-
-
