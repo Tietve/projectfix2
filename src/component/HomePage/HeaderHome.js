@@ -1,6 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomePage.css'
+import logo from './ticket-2 1.png'
 
 const HeaderHome = ({ image1, image2 }) => {
     return (
@@ -38,6 +39,14 @@ const HeaderHome = ({ image1, image2 }) => {
             {/* Navbar */}
             <nav className="navbar navbar-expand-lg" style={{ position: 'absolute', width: '100%' }}>
                 <div className="container-fluid">
+                    <img
+                        src={logo} // Thay bằng đường dẫn logo của bạn
+                        alt="Logo"
+                        style={{
+                            height: '40px', // Tùy chỉnh chiều cao logo
+                            marginRight: '10px', // Tạo khoảng cách giữa logo và chữ
+                        }}
+                    />
                     <a className="navbar-brand text-white fw-bold" href="#home">
                         My Tickets
                     </a>
@@ -75,14 +84,15 @@ const HeaderHome = ({ image1, image2 }) => {
             </nav>
 
             {/* Content */}
-            <div className="container-fluid text-white position-relative" style={{ top: '150px' }}>
-                <h1 className="fw-bold" style={{ fontSize: '40px' }}>
+            <div className="container-fluid text-white position-absolute text-end"
+                 style={{top: '150px', right: '50px', maxWidth: '50%'}}>
+                <h1 className="fw-bold" style={{fontSize: '40px'}}>
                     SBS MTV The Kpop Show Ticket Package
                 </h1>
                 <p style={{ fontSize: '18px', lineHeight: '1.5' }}>
                     Look no further! Our SBS The Show tickets are the simplest way for you to experience a live Kpop recording.
                 </p>
-                <div className="d-flex gap-3">
+                <div className="d-flex gap-3 justify-content-end">
                     <a href="#get-ticket" className="btn btn-pink text-white fw-bold rounded-pill px-5">
                         Get Ticket
                     </a>
@@ -98,6 +108,10 @@ const HeaderHome = ({ image1, image2 }) => {
             </div>
         </div>
     );
+
+
+
+
 };
 
 export default HeaderHome;
