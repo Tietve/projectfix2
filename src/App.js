@@ -14,7 +14,7 @@ const App = () => {
 				{/* Định tuyến các trang */}
 				<Route path='/' element={<HomePage />} />
 				<Route path='/footerheader' element={<Footerheader />} />
-				<Route path='/event/:eventUuid' element={<EventDetail />} />
+				<Route path='/events/:eventUuid' element={<EventDetail />} />
 				<Route path='/cart' element={<Cart />} />
 				<Route path='/checkout' element={<Checkout />} />
 			</Routes>
